@@ -1,0 +1,119 @@
+.nc-toasts-overlay-root {
+    position: fixed;
+    z-index: 100000;
+}
+
+.nc-toasts-container {
+    position: fixed;
+    top: 38px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 340px;
+    max-width: calc(100vw - 24px);
+    pointer-events: none;
+}
+
+.nc-toast {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 10px 10px 12px;
+    border-radius: 4px;
+    border-left: 4px solid transparent;
+    background: var(--nc-toast-background);
+    color: var(--nc-toast-foreground);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    pointer-events: auto;
+    animation: nc-toast-in 180ms ease-out;
+}
+
+.nc-toast-closing {
+    animation: nc-toast-out 220ms ease-in forwards;
+}
+
+.nc-toast.nc-severity-info {
+    border-left-color: var(--nc-color-info);
+}
+
+.nc-toast.nc-severity-warning {
+    border-left-color: var(--nc-color-warning);
+}
+
+.nc-toast.nc-severity-error {
+    border-left-color: var(--nc-color-error);
+}
+
+.nc-toast-icon {
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.nc-toast.nc-severity-info .nc-toast-icon {
+    color: var(--nc-color-info);
+}
+
+.nc-toast.nc-severity-warning .nc-toast-icon {
+    color: var(--nc-color-warning);
+}
+
+.nc-toast.nc-severity-error .nc-toast-icon {
+    color: var(--nc-color-error);
+}
+
+.nc-toast-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.nc-toast-title {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.nc-toast-message {
+    opacity: 0.9;
+    word-break: break-word;
+}
+
+.nc-toast-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.nc-toast-close {
+    flex-shrink: 0;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.nc-toast-close:hover {
+    opacity: 1;
+}
+
+@keyframes nc-toast-in {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes nc-toast-out {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+        max-height: 200px;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+}

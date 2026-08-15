@@ -1,0 +1,13 @@
+:root {
+    --nc-font-size: 13px;
+    --nc-foreground: #616161;
+    --nc-border: rgba(128, 128, 128, 0.35);
+    --nc-hover-background: #e8e8e8;
+
+    --nc-toast-background: #f3f3f3;
+    --nc-toast-foreground: #616161;
+
+    --nc-color-info: #0063d3;
+    --nc-color-warning: #bf8803;
+    --nc-color-error: #e51400;
+}

@@ -1,0 +1,170 @@
+.nc-widget {
+    height: 100%;
+}
+
+.nc-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: var(--nc-font-size);
+    color: var(--nc-foreground);
+}
+
+.nc-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--nc-border);
+}
+
+.nc-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nc-filter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.nc-filter input[type='checkbox'] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.nc-filter-icon {
+    font-size: 14px;
+}
+
+.nc-filter-info .nc-filter-icon {
+    color: var(--nc-color-info);
+}
+
+.nc-filter-warning .nc-filter-icon {
+    color: var(--nc-color-warning);
+}
+
+.nc-filter-error .nc-filter-icon {
+    color: var(--nc-color-error);
+}
+
+.nc-clear-all {
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.nc-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.nc-empty {
+    padding: 16px 8px;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.nc-group-header {
+    padding: 6px 8px 2px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+
+.nc-item {
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--nc-border);
+    border-left: 3px solid transparent;
+}
+
+.nc-item.nc-severity-info {
+    border-left-color: var(--nc-color-info);
+}
+
+.nc-item.nc-severity-warning {
+    border-left-color: var(--nc-color-warning);
+}
+
+.nc-item.nc-severity-error {
+    border-left-color: var(--nc-color-error);
+}
+
+.nc-item-clickable {
+    cursor: pointer;
+}
+
+.nc-item:hover {
+    background: var(--nc-hover-background);
+}
+
+.nc-item-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.nc-item-icon {
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.nc-item.nc-severity-info .nc-item-icon {
+    color: var(--nc-color-info);
+}
+
+.nc-item.nc-severity-warning .nc-item-icon {
+    color: var(--nc-color-warning);
+}
+
+.nc-item.nc-severity-error .nc-item-icon {
+    color: var(--nc-color-error);
+}
+
+.nc-item-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.nc-item-title {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nc-item-message {
+    opacity: 0.85;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nc-item-time {
+    flex-shrink: 0;
+    opacity: 0.6;
+    font-size: 11px;
+    padding-top: 2px;
+}
+
+.nc-item-expand {
+    flex-shrink: 0;
+    opacity: 0.7;
+    padding-top: 2px;
+}
+
+.nc-item-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+    margin-left: 22px;
+}
