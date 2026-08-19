@@ -1,6 +1,6 @@
 export const notificationServicePath = '/services/notification-center';
-
 export type NotificationSeverity = 'info' | 'warning' | 'error';
+export const HISTORY_LIMIT = 100;
 
 export interface NotificationAction {
     readonly id: string;

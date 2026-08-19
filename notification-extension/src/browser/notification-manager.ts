@@ -1,9 +1,7 @@
 import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
 import { Emitter, Event } from '@theia/core/lib/common/event';
-import { Notification, NotificationInput, NotificationService } from '../common/notification-protocol';
+import { HISTORY_LIMIT, Notification, NotificationInput, NotificationService } from '../common/notification-protocol';
 import { NotificationWatcher } from './notification-watcher';
-
-export const HISTORY_LIMIT = 100;
 
 /**
  * Фронтенд-фасад над RPC-прокси `NotificationService`.

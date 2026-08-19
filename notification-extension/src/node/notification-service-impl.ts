@@ -6,10 +6,10 @@ import URI from '@theia/core/lib/common/uri';
 import * as fs from 'fs';
 import * as path from 'path';
 import {
+    HISTORY_LIMIT,
     Notification, NotificationClient, NotificationInput, NotificationService
 } from '../common/notification-protocol';
 
-export const HISTORY_LIMIT = 100;
 const HISTORY_FILE_NAME = 'notification-center-history.json';
 
 @injectable()
