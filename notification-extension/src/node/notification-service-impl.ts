@@ -100,7 +100,11 @@ export class NotificationServiceImpl implements NotificationService {
 
     protected broadcast(fn: (client: NotificationClient) => void): void {
         for (const client of this.clients) {
-            fn(client);
+            try {
+                fn(client);
+            } catch (e) {
+                this.logger.error(`[notification-center] Error while broadcasting: ${e}`);
+            }
         }
     }
 }
