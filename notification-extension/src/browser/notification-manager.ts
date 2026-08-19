@@ -35,7 +35,7 @@ export class NotificationManager {
         this.watcher.onNotification(notification => this.handleNotification(notification));
         this.watcher.onHistoryCleared(() => this.handleHistoryCleared());
         this.notificationService.getHistory().then(history => {
-            this._history = history;
+            this._history = history.slice(-HISTORY_LIMIT);
             this.onDidChangeHistoryEmitter.fire(this._history);
         }).catch(() => {});
     }
